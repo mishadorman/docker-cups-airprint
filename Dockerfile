@@ -1,5 +1,5 @@
-# custom base
-FROM tigerj/amphprn:test
+# base image
+FROM ubuntu:16.04
 
 # Install the packages we need. Avahi will be included
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -30,8 +30,5 @@ RUN sed -i 's/Listen localhost:631/Listen 0.0.0.0:631/' /etc/cups/cupsd.conf && 
         echo "DefaultEncryption Never" >> /etc/cups/cupsd.conf && \
         chmod +x /root/*
 
-# Set DOCKER_STATE
-ENV DOCKER_STATE=RUN
-
 # Docker CMD
-CMD ["/bin/bash","-c","/root/run_cups.sh"]
+CMD ["/bin/bash","/root/run_cups.sh"]

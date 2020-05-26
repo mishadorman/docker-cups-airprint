@@ -1,6 +1,6 @@
 # About
 Modified copy of source code at:
-https://github.com/quadportnick/docker-cups-airprint
+https://github.com/quadportnick/docker-cups-airprint via https://www.github.com/RagingTiger/docker-cups-airprint
 
 # Intro
 This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint
@@ -10,7 +10,8 @@ The local Avahi will be utilized for advertising the printers on the network.
 This is also an excuse to dip my toes into GitHub/Docker more, so why not?
 Hopefully someone else finds this useful.
 
-# Multi-arch Image
+# XXX Multi-arch Image
+XXX
 The below commands reference a
 [Docker Manifest List](https://docs.docker.com/engine/reference/commandline/manifest/)
 at [`tigerj/cups-airprint`](https://hub.docker.com/r/tigerj/cups-airprint)
@@ -21,6 +22,7 @@ the matching image architecture (e.g. `amd64`, `arm32v7`, or `arm64`) based on
 the hosts architecture. Hence, if you are on a **Raspberry Pi** the below
 commands will work the same as if you were on a traditional `amd64`
 desktop/laptop computer.
+XXX
 
 # Getting Started
 This section will give an overview of the essential options/arguments to pass
@@ -134,3 +136,4 @@ configuration for this same reason
 ## ToDo
 * Write common errors section
 * Write CUPS printer setup section 
+* Provide a way to load specific printer drivers into the image (apt-get)

@@ -5,7 +5,7 @@ https://github.com/quadportnick/docker-cups-airprint via https://www.github.com/
 # Intro
 This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint
 relay for printers that are already on the network but not AirPrint capable.
-The local Avahi will be utilized for advertising the printers on the network.
+The hosts Avahi can be utilized for advertising the printers on the network, or a separate avahi container (e.g. https://hub.docker.com/r/ydkn/avahi / https://gitlab.com/ydkn/docker-avahi) can be used.
 
 This is also an excuse to dip my toes into GitHub/Docker more, so why not?
 Hopefully someone else finds this useful.
@@ -41,7 +41,7 @@ $ docker run
        --device /dev/usb \
        -e CUPSADMIN="admin" \
        -e CUPSPASSWORD="password" \
-       tigerj/cups-airprint
+       XXX_tigerj/cups-airprint
 ```
 To stop the container simply run:
 ```
@@ -137,3 +137,4 @@ configuration for this same reason
 * Write common errors section
 * Write CUPS printer setup section 
 * Provide a way to load specific printer drivers into the image (apt-get)
+* Document "Avahi in a separate container" config
